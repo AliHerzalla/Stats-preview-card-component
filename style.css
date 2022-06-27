@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+:root {
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --main-heading-and-stats: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Inter", "Lexend Deca";
+  background-color: var(--main-background);
+  height: 100vh;
+}
+/* Start Design */
+.conatiner {
+  background-color: var(--card-background);
+  display: flex;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 100px auto 0;
+}
+
+.conatiner .text {
+  padding: 50px;
+  width: 50%;
+}
+.conatiner .text .title {
+  color: var(--main-heading-and-stats);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.conatiner .title > span {
+  color: var(--accent);
+}
+.conatiner .text .about {
+  font-size: 1.3rem;
+  color: var(--main-paragraph);
+  margin-bottom: 50px;
+}
+.conatiner .text .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 100px;
+}
+.conatiner .text .info .box {
+  text-align: left;
+}
+.conatiner .text .info .box h4 {
+  font-size: 2rem;
+  color: var(--main-heading-and-stats);
+  margin-bottom: 5px;
+}
+.conatiner .text .info .box span {
+  color: var(--stat-headings);
+  font-size: 1.3rem;
+}
+.conatiner .image {
+  width: 50%;
+  position: relative;
+}
+.conatiner .image::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(277, 64%, 61%, 0.7);
+}
+.conatiner .image img {
+  max-width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+@media (max-width: 949px) {
+  .conatiner {
+    flex-direction: column;
+    width: 300px;
+  }
+  .conatiner .text {
+    padding: 50px;
+    width: 100%;
+  }
+  .conatiner .text .info {
+    padding-top: 50px;
+  }
+  .conatiner .text .about {
+    margin-bottom: 0%;
+  }
+  .conatiner .image {
+    width: 100%;
+  }
+}
+.attribution {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.attribution a {
+  font-size: 1.3rem;
+  margin-left: 3px;
+}
+/* End Design */
